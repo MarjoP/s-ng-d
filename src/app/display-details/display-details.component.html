@@ -1,0 +1,22 @@
+<section class="content text-center">
+
+    <button 
+    class="btn btn-primary"
+    (click)="displayDetails()">
+        Display Details
+    </button>
+
+    <p 
+    class="details"
+    *ngIf="!pIsHidden">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam consequuntur eum quia doloremque nihil voluptates aut, et similique repellat, voluptatum quod, fugiat velit ad voluptatibus quam nam perferendis placeat autem laborum iure provident nesciunt exercitationem. Voluptates omnis eos nesciunt ipsam?
+    </p>
+    
+    <p 
+    *ngFor = "let count of loki"
+    [ngStyle]="{backgroundColor: count <5 ? 'white' : 'black' }"
+    [ngClass]="{'whiteText': count >= 5 }">
+        {{ count }}
+    </p>
+
+</section>
